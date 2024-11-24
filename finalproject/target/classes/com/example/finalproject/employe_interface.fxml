@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17.0.12" fx:controller="com.example.finalproject.EmployeTableController">
+    <TableView fx:id="employeTable" layoutX="52.0" layoutY="10" prefHeight="400" prefWidth="538.0">
+        <columns>
+            <TableColumn fx:id="columnUsername" prefWidth="131.99998474121094" text="Username" />
+            <TableColumn fx:id="columnEmail" prefWidth="159.20001220703125" text="Email" />
+            <TableColumn fx:id="columnPhone" prefWidth="126.60003662109375" text="Phone" />
+            <TableColumn fx:id="columnPoste" prefWidth="160.60003662109375" text="Poste" />
+        </columns>
+    </TableView>
+</AnchorPane>

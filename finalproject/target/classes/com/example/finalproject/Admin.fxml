@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="500.0" prefWidth="450.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.finalproject.AdminController">
+   <children>
+      <AnchorPane fx:id="pane_login" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Button fx:id="buttonadmin" layoutX="213.0" layoutY="378.0" mnemonicParsing="false" onAction="#handleLogin" prefHeight="38.0" prefWidth="274.0" style="-fx-background-color: #1591ea;" text="login" textFill="WHITE" AnchorPane.bottomAnchor="84.39999999999998" AnchorPane.leftAnchor="213.0" AnchorPane.rightAnchor="214.2" AnchorPane.topAnchor="378.0">
+               <font>
+                  <Font name="Arial Narrow Bold" size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <effect>
+                  <Lighting diffuseConstant="1.61" specularConstant="0.0" specularExponent="0.0" surfaceScale="1.13">
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                  </Lighting>
+               </effect>
+            </Button>
+            <PasswordField fx:id="password" layoutX="212.0" layoutY="287.0" prefHeight="39.0" prefWidth="274.0" promptText="Enter password" style="-fx-border-color: #1591ea;" />
+            <TextField fx:id="username" layoutX="213.0" layoutY="194.0" prefHeight="39.0" prefWidth="274.0" promptText="Enter username" style="-fx-border-color: #1591ea;" styleClass="bo" />
+            <ImageView fitHeight="60.0" fitWidth="70.0" layoutX="320.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@icons8-administrator-male-64.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="300.0" layoutY="97.0" prefHeight="50.0" prefWidth="100.0" text="Admin" textFill="#292d30">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="32.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="admininterface" prefHeight="500.0" prefWidth="700.0" visible="false">
+         <children>
+            <AnchorPane fx:id="menu" layoutY="6.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #898989;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Button fx:id="buttondemandeconge" layoutX="13.0" layoutY="323.0" mnemonicParsing="false" onAction="#showLeaveRequestTable" prefHeight="59.0" prefWidth="174.0" style="-fx-background-color: #4DFFBC;" text="Demande Conges" AnchorPane.bottomAnchor="118.60000000000002" AnchorPane.leftAnchor="13.0" AnchorPane.rightAnchor="13.400000000000006" AnchorPane.topAnchor="323.0" />
+                  <Button fx:id="buttoninfo" layoutX="13.0" layoutY="77.0" mnemonicParsing="false" onAction="#showEmployeeTable" prefHeight="60.0" prefWidth="174.0" text="Information des Employes" AnchorPane.leftAnchor="13.0" AnchorPane.rightAnchor="13.400000000000006" AnchorPane.topAnchor="77.0" />
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="pane_info" prefHeight="500.0" prefWidth="499.0" AnchorPane.rightAnchor="0.0">
+               <children>
+                  <TableView fx:id="table_employe" prefHeight="338.0" prefWidth="499.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="1.0">
+                    <columns>
+                      <TableColumn fx:id="usernameemp" prefWidth="105.60003358125687" text="username" />
+                      <TableColumn fx:id="posteemp" prefWidth="97.5999755859375" text="poste" />
+                        <TableColumn fx:id="phone_emp" prefWidth="107.99998474121094" text="phone" />
+                        <TableColumn fx:id="email_emp" prefWidth="188.00006103515625" text="email" />
+                    </columns>
+                  </TableView>
+                  <TextField fx:id="iem" layoutX="292.0" layoutY="402.0" prefHeight="26.0" prefWidth="174.0" promptText="Enter email" style="-fx-border-color: #1591ea;" />
+                  <TextField fx:id="iuse" layoutX="59.0" layoutY="348.0" prefHeight="26.0" prefWidth="174.0" promptText="Enter username" style="-fx-border-color: #1591ea;" />
+                  <TextField fx:id="ipo" layoutX="292.0" layoutY="348.0" prefHeight="26.0" prefWidth="174.0" promptText="Enter poste" style="-fx-border-color: #1591ea;" />
+                  <TextField fx:id="ipho" layoutX="59.0" layoutY="402.0" prefHeight="26.0" prefWidth="174.0" promptText="Enter phone" style="-fx-border-color: #1591ea;" />
+                  <Button layoutX="292.0" layoutY="455.0" mnemonicParsing="false" onAction="#editEmployee" prefHeight="30.0" prefWidth="174.0" style="-fx-background-color: #FFA500;" text="update" />
+                  <Button layoutX="59.0" layoutY="455.0" mnemonicParsing="false" onAction="#deleteEmployee" prefHeight="30.0" prefWidth="174.0" style="-fx-background-color: #FF2600;" text="Remove" />
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="pane_conge" layoutX="201.0" prefHeight="500.0" prefWidth="499.0" visible="false">
+               <children>
+                  <TableView fx:id="tableconge" layoutX="-1.0" layoutY="-2.0" prefHeight="446.0" prefWidth="499.0">
+                    <columns>
+                      <TableColumn fx:id="usernameconge" prefWidth="140.7999267578125" text="username" />
+                      <TableColumn fx:id="startconge" prefWidth="163.2000732421875" text="start date" />
+                        <TableColumn fx:id="endconge" prefWidth="195.20004272460938" text="end date" />
+                    </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+   <cursor>
+      <Cursor fx:constant="HAND" />
+   </cursor>
+</AnchorPane>

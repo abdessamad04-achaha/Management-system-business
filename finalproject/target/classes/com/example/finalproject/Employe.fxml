@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.finalproject.EmployeController">
+   <children>
+      <AnchorPane fx:id="pane_login" layoutX="46.0" layoutY="25.0" prefHeight="400.0" prefWidth="508.0">
+         <children>
+            <Label layoutX="206.0" layoutY="38.0" prefHeight="43.0" prefWidth="96.0" text="Login">
+               <font>
+                  <Font name="Bell MT Bold" size="35.0" />
+               </font>
+            </Label>
+            <TextField fx:id="username_login" layoutX="108.0" layoutY="146.0" prefHeight="34.0" prefWidth="291.0" promptText="Enter username" style="-fx-border-color: #1591ea;" />
+            <Label layoutX="114.0" layoutY="122.0" text="Username" textFill="#1591ea">
+               <font>
+                  <Font name="Arial Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label layoutX="115.0" layoutY="213.0" text="Password" textFill="#1591ea">
+               <font>
+                  <Font name="Arial Bold" size="13.0" />
+               </font>
+            </Label>
+            <PasswordField fx:id="password_login" layoutX="108.0" layoutY="238.0" prefHeight="34.0" prefWidth="291.0" promptText="Enter password" style="-fx-border-color: #1591ea;" />
+            <Button fx:id="button_login" layoutX="222.0" layoutY="297.0" mnemonicParsing="false" onAction="#Login" prefHeight="34.0" prefWidth="63.0" style="-fx-background-color: #1591ea;" text="login" textFill="WHITE">
+               <font>
+                  <Font name="Roboto" size="16.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Label layoutX="108.0" layoutY="357.0" prefHeight="18.0" prefWidth="139.0" text="Don't have an account? " />
+            <Hyperlink fx:id="link_signup" layoutX="230.0" layoutY="354.0" onAction="#SignupPaneShow" text="SignUp" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="pane_signup" prefHeight="426.0" prefWidth="564.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label layoutX="226.0" layoutY="14.0" prefHeight="50.0" prefWidth="139.0" text="Sign Up">
+               <font>
+                  <Font name="Bell MT Bold" size="38.0" />
+               </font>
+            </Label>
+            <TextField fx:id="username_sign" layoutX="56.0" layoutY="124.0" prefHeight="34.0" prefWidth="224.0" promptText="Enter username" style="-fx-border-color: #1591ea;" />
+            <TextField fx:id="poste_sign" layoutX="310.0" layoutY="124.0" prefHeight="34.0" prefWidth="224.0" promptText="Enter poste" style="-fx-border-color: #1591ea;" />
+            <TextField fx:id="phone_sign" layoutX="56.0" layoutY="207.0" prefHeight="34.0" prefWidth="224.0" promptText="Enter phone number" style="-fx-border-color: #1591ea;" />
+            <TextField fx:id="email_sign" layoutX="55.0" layoutY="290.0" prefHeight="34.0" prefWidth="481.0" promptText="Enter email" style="-fx-border-color: #1591ea;" />
+            <PasswordField fx:id="password_sign" layoutX="310.0" layoutY="207.0" prefHeight="34.0" prefWidth="224.0" promptText="Enter password" style="-fx-border-color: #1591ea;" />
+            <Label layoutX="63.0" layoutY="98.0" text="Username" textFill="#1591ea">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="318.0" layoutY="98.0" text="Poste" textFill="#1591ea">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="63.0" layoutY="180.0" text="Phone" textFill="#1591ea">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="318.0" layoutY="180.0" text="Password" textFill="#1591ea">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="66.0" layoutY="262.0" text="Email" textFill="#1591ea">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Button fx:id="button_sign" layoutX="56.0" layoutY="372.0" mnemonicParsing="false" onAction="#regBtn" prefHeight="34.0" prefWidth="224.0" style="-fx-background-color: #1591ea;" text="Sign up" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="Roboto" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="button_back" layoutX="314.0" layoutY="372.0" mnemonicParsing="false" onAction="#LoginPaneShow" prefHeight="34.0" prefWidth="224.0" style="-fx-background-color: #1591ea;" text="Back" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="Roboto" size="17.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
